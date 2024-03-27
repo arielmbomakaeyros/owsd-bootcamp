@@ -160,8 +160,24 @@ const SignUpForm = () => {
           setIsLoading(false);
           toast.success("User Registred Succesfully"); 
           router.refresh(); 
+
           router.push("/"); 
           setIsLoading (false)
+          try {
+            const users = await fetch(`/api/users/signup`, {
+                cache: "no-store", 
+                // next: { revalidate: 10 }, 
+            }); 
+      
+            if (!users.ok) {
+                throw new Error("Failed to fetch users"); 
+            } else {
+                const test = await users.json()
+                setEstablishedUser (test)
+            }
+          } catch (error) {
+              console.log("Error loading attendancesToday: ", error); 
+          }
       } else {
         setIsLoading (false)
         toast.error("User Could not be registered"); 

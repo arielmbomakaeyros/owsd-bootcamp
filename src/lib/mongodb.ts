@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// const MONGODB_URI = "mongodb+srv://owsd-user:owsd-pwd@owsd-db.2gpgkfc.mongodb.net/owsd_contacts"
+// const MONGODB_URI = "mongodb+srv://arielmboma:xcsfvmLlFqmB8RTT@owsd-contact.m5hxq1g.mongodb.net/owsd-contact"
 const connectMongoDB = async () => {
     try {
         await mongoose.connect(process?.env?.MONGODB_URI as string);
