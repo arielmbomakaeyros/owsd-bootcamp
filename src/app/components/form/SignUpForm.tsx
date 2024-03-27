@@ -9,6 +9,9 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Calendar } from '@/components/ui/calendar';
 import { DatePickerDemo } from '@/components/ui/DatePicker';
 
+const API_URL = "https://owsd-bootcamp.vercel.app"
+// const API_URL = "http://localhost:3000"
+
 const SignUpForm = () => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false); 
@@ -22,7 +25,7 @@ const SignUpForm = () => {
   const getAllClients = async () => {
     console.log("devdedevdevedededededed")
     try {
-        const users = await fetch(`/api/users/signup`, {
+        const users = await fetch(`${ API_URL }/api/users/signup`, {
             cache: "no-store", 
             // next: { revalidate: 10 }, 
         }); 
@@ -148,12 +151,13 @@ const SignUpForm = () => {
         rLanguageLevel: selectedLevel?.name
     }
     try {
-      const result = await fetch("/api/users/signup", {
+      const result = await fetch(`${ API_URL }/api/users/signup`, {
           method: "POST", 
           headers: {
               "Content-type": "application/json", 
           }, 
           body: JSON.stringify(data)
+          // body: data!
       }); 
 
       if (result.ok) {
@@ -163,21 +167,21 @@ const SignUpForm = () => {
 
           router.push("/"); 
           setIsLoading (false)
-          try {
-            const users = await fetch(`/api/users/signup`, {
-                cache: "no-store", 
-                // next: { revalidate: 10 }, 
-            }); 
+          // try {
+          //   const users = await fetch(`/api/users/signup`, {
+          //       cache: "no-store", 
+          //       // next: { revalidate: 10 }, 
+          //   }); 
       
-            if (!users.ok) {
-                throw new Error("Failed to fetch users"); 
-            } else {
-                const test = await users.json()
-                setEstablishedUser (test)
-            }
-          } catch (error) {
-              console.log("Error loading attendancesToday: ", error); 
-          }
+          //   if (!users.ok) {
+          //       throw new Error("Failed to fetch users"); 
+          //   } else {
+          //       const test = await users.json()
+          //       setEstablishedUser (test)
+          //   }
+          // } catch (error) {
+          //     console.log("Error loading attendancesToday: ", error); 
+          // }
       } else {
         setIsLoading (false)
         toast.error("User Could not be registered"); 
