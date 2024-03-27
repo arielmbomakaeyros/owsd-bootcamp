@@ -33,8 +33,8 @@ const SignUpForm = () => {
             throw new Error("Failed to fetch users"); 
         } else {
             const test = await users.json()
+            console.log("__________===", test)
             setEstablishedUser (test)
-            // console.log("__________===", test)
             // return await users.json(); 
         }
     } catch (error) {
@@ -42,7 +42,7 @@ const SignUpForm = () => {
     }
   }
 
-//   console.log("999999", establishUser)
+  console.log("999999", establishUser)
 
   useEffect (() => {
       getAllClients ()
