@@ -7,7 +7,7 @@ export const GET = async (request: any) => {
         console.log("00000000000000000000000")
         await connectMongoDB(); 
         const users = await User.find(); 
-        console.log("00000000", users)
+        // console.log("00000000", users)
         return NextResponse.json({ message: "Users Listed Successfully", users }, { status: 200 } ); 
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 })
