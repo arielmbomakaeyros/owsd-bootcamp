@@ -10,13 +10,13 @@ import SignupModule from "./module/SignupModule";
 // export const preferredRegion = 'auto'
 // export const maxDuration = 5
 
-const API_URL = "https://owsd-bootcamp.vercel.app"
+// const API_URL = "https://owsd-bootcamp.vercel.app"
 // const API_URL = "http://localhost:3000"
 
 async function getAllClients() {
   // const res = await fetch(`https://api.example.com/artist/${username}/albums`)
   try {
-    const users = await fetch(`${ API_URL }/api/ows_bootcamp_users`, {
+    const users = await fetch(`${ process?.env?.API_URL }/api/ows_bootcamp_users`, {
         cache: "no-store", 
         // next: { revalidate: 10 }, 
     }); 
