@@ -9,8 +9,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Calendar } from '@/components/ui/calendar';
 import { DatePickerDemo } from '@/components/ui/DatePicker';
 
-// const API_URL = "https://owsd-bootcamp.vercel.app"
-const API_URL = "http://localhost:3000"
+const API_URL = "https://owsd-bootcamp.vercel.app"
+// const API_URL = "http://localhost:3000"
 
 
 const SignUpForm = () => {
