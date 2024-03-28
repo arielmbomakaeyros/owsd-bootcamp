@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+
+@font-face {
+  font-family: "articulat";
+  src: url("../../../public/fonts/Articulat/ArticulatCF-Regular.otf"); 
+  font-weight: normal;
+
+  /* Add additional formats if needed */
+}
+
+@font-face {
+  font-family: "visby-bold";
+  src: url("../../../public/fonts/Visby/VisbyCF-Bold.otf"); 
+  /* Add additional formats if needed */
+}
+
+@font-face {
+  font-family: "visby-regular";
+  src: url("../../../public/fonts/Visby/VisbyCF-Regular.otf");
+
+  /* Add additional formats if needed */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background-color: white; */
+  background-color: #f7f5f2;
+  /* font-family: ; */
+  font-family: visby-bold;
+  /* display: grid;
+  grid-template-columns: repeat(autofit, minmax(200, 300)); */
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
