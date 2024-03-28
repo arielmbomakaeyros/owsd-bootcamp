@@ -16,7 +16,7 @@ const API_URL = "https://owsd-bootcamp.vercel.app"
 async function getAllClients() {
   // const res = await fetch(`https://api.example.com/artist/${username}/albums`)
   try {
-    const users = await fetch(`${ API_URL }/api/users/signup`, {
+    const users = await fetch(`${ API_URL }/api/ows_bootcamp_users`, {
         cache: "no-store", 
         // next: { revalidate: 10 }, 
     }); 

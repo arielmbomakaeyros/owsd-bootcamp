@@ -26,10 +26,14 @@ const SignUpForm = () => {
   const getAllClients = async () => {
     console.log("devdedevdevedededededed")
     try {
-        const users = await fetch(`${ API_URL }/api/users/signup`, {
-            cache: "no-store", 
-            // next: { revalidate: 10 }, 
-        }); 
+        // const users = await fetch(`${ API_URL }/api/users/signup`, {
+        //     cache: "no-store", 
+        //     // next: { revalidate: 10 }, 
+        // }); 
+        const users = await fetch(`${ API_URL }/api/ows_bootcamp_users`, {
+          cache: "no-store", 
+          // next: { revalidate: 10 }, 
+        });
   
         // console.log("-----=-------====-----------====", users)
   
@@ -152,7 +156,7 @@ const SignUpForm = () => {
         rLanguageLevel: selectedLevel?.name
     }
     try {
-      const result = await fetch(`${ API_URL }/api/users/signup`, {
+      const result = await fetch(`${ API_URL }/api/ows_bootcamp_users`, {
           method: "POST", 
           headers: {
               "Content-type": "application/json", 
