@@ -9,8 +9,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Calendar } from '@/components/ui/calendar';
 import { DatePickerDemo } from '@/components/ui/DatePicker';
 
-const API_URL = "https://owsd-bootcamp.vercel.app"
-// const API_URL = "http://localhost:3000"
+// const API_URL = "https://owsd-bootcamp.vercel.app"
+const API_URL = "http://localhost:3000"
 
 
 const SignUpForm = () => {
@@ -384,8 +384,10 @@ const SignUpForm = () => {
           </div>
         )
       }
+      R Language Level:
 
       <div className='w-[100%] flex flex-col gap-4'>
+
         <div className='sm:grid sm:grid-cols-[repeat(4,minmax(100px,_1fr))] flex flex-row gap-1 justify-start sm:gap-2  w-[60%]'>
             {/* grid grid-cols-[repeat(3,minmax(300px,_1fr))] */}
             {/* flex flex-row gap-3 justify-around  */}
@@ -411,7 +413,7 @@ const SignUpForm = () => {
             </div>
 
         </div>
-        R Language Level:
+        
         <div className='sm:grid sm:grid-cols-[repeat(4,minmax(100px,_1fr))] flex flex-row gap-1 justify-start sm:gap-2  w-[60%]'>
             {/* space-y-1 leading-none */}
             <div onClick={ () => handleHighSelection() } className={ "flex flex-row justify-center gap-2 bg-white py-[.5rem] px-[1rem] rounded-3xl cursor-pointer" }>

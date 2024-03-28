@@ -10,8 +10,8 @@ import SignupModule from "./module/SignupModule";
 // export const preferredRegion = 'auto'
 // export const maxDuration = 5
 
-const API_URL = "https://owsd-bootcamp.vercel.app"
-// const API_URL = "http://localhost:3000"
+// const API_URL = "https://owsd-bootcamp.vercel.app"
+const API_URL = "http://localhost:3000"
 
 async function getAllClients() {
   // const res = await fetch(`https://api.example.com/artist/${username}/albums`)
