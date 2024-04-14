@@ -224,6 +224,8 @@ const SignUpForm = () => {
 
   const onSubmit: SubmitHandler<ClientRegistrationFormValues> = async (data) => {
     // get the element that has checked 
+
+
     const checkedGender = newArrayD.find(ele => ele.checked === true)
     const checkedRLanguageLevel = rLanguageLevelD.find(ele => ele.checked === true)
     
@@ -237,7 +239,8 @@ const SignUpForm = () => {
       rLanguageLevel: checkedRLanguageLevel?.name as string, 
       oswdMenber: oswdMenber?.status, 
     }
-    console.log(data, "////////");
+    console.log(data, "////////")
+    return; 
     try {
       const result = await fetch(`/api/ows_bootcamp_users`, {
           method: "POST", 

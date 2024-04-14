@@ -32,7 +32,7 @@ const HomePageComp = () => {
             </div>
         </div>
         
-        <div className='flex flex-col border border-white rounded-3xl justify-center gap-20 mt-[2rem] w-[100%] sm:w-[80%] lg:w-[50%] bg-slate-100'>
+        <div className='flex flex-col border border-white rounded-3xl justify-center gap-20 mt-[2rem] w-[100%] sm:w-[90%] lg:w-[50%] bg-slate-100'>
             <SignUpForm />
         </div>
         <div className='sticky flex justify-center bottom-0 lg:relative w-[100%]  lg:bg-transparent'>

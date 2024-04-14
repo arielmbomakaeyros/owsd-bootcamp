@@ -11,12 +11,12 @@ export const links: NavigationBarType  = [
         name: "Save Client", 
         icon: addClientIcon,  
     }, 
-    {
-        id: 2, 
-        link: "/upload-user-list", 
-        name: "Upload File", 
-        icon: importFileIcon,  
-    }, 
+    // {
+    //     id: 2, 
+    //     link: "/upload-user-list", 
+    //     name: "Upload File", 
+    //     icon: importFileIcon,  
+    // }, 
     {
         id: 3, 
         link: "/client-list", 
